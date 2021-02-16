@@ -1,0 +1,28 @@
+print("=====TUGAS PRAKTEK VIDEO=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====MENCARI RATA-RATA WAKTU=====")
+print("")
+
+#Inputan Untuk Jarak dan Kecepatan
+print("Jarak berupa satuan KM dan Kecepatan berupa satuan KM/JAM")
+nama = input("Input Nama = ")
+print("")
+jar1 = int(input("Jarak perjalanan pertama = "))
+kec1 = int(input("Kecepatan perjalanan pertama = "))
+print("")
+jar2 = int(input("Jarak perjalanan kedua = "))
+kec2 = int(input("Keceptana perjalanan kedua = "))
+print("")
+jar3 = int(input("Jarak perjalanan ketiga = "))
+kec3 = int(input("Kecepatan perjalanan ketiga = "))
+print("")
+
+#Rumus rata-rata waktu
+towak1 = jar1/kec1
+towak2 = jar2/kec2
+towak3 = jar3/kec3
+semtowak = towak1 + towak2 + towak3
+hatowak = semtowak / 3
+
+#Output yang diterima berupa rata-rata waktu
+print("Rata-rata waktu perjalanan yang ditempuh",nama,"",hatowak,"jam.")
