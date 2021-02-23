@@ -1,0 +1,45 @@
+print("=====PENYELESAIAN SOAL VIDEO 2=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====STRUKTUR KONTROL PERCABANGAN=====")
+print("")
+
+#Matematika
+mate = input("Nilai pelajaran Matematika : ")
+mat = eval(mate)
+if mat >= 80 :
+    print("Grade A")
+    print("Nilai anda sudah baik.")
+elif mat >= 50 :
+    print("Grade B")
+    print("Nilai anda sudah cukup.")
+else :
+    print("Grade C")
+    print("Nilai anda kurang.")
+print("")
+
+#Fisika
+fisi =  input("Nilai pelajaran Fisika : ")
+fis = eval(fisi)
+if fis >= 90 :
+    print("Grade A")
+    print("Nilai anda sudah baik.")
+elif fis >= 70 :
+    print("Grade B")
+    print("Nilai anda sudah cukup.")
+else :
+    print ("Grade C")
+    print("Nilai anda kurang.")
+print("")
+
+#Kimia
+kimi = input("Nilai pelajaran Kimia : ")
+kim = eval(kimi)
+if kim >= 85 :
+    print("Grade A")
+    print("Nilai anda sudah baik.")
+elif kim >= 60 :
+    print("Grade B")
+    print("Nilai anda sudah cukup.")
+else :
+    print("Grade C")
+    print("Nilai anda kurang.")
