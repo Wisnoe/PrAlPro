@@ -1,0 +1,65 @@
+print("=====TUGAS VIDEO SOAL 3=====")
+print("=====NARENDRA POETRA WISNEOWARDHANA - 71200555=====")
+print("=====Modular Programing=====")
+print("")
+
+try :
+    print("Selamat Datang di Token Sahabat")
+    print("")
+    print("Silahkan pilih jenis token : ")
+    print("1.TokenA = Rp.100000/bulan")
+    print("2.TokenB = Rp.150000/bulan")
+    print("3.TokenC = Rp.200000/bulan")
+    token = int(input("Masukan nomer jenis token : "))
+    print("")
+
+    print("Pilihan jenis pembayaran : ")
+    print("1.Dalam Bulan.")
+    print("2.Dalam Rupiah.")
+    beli = int(input("Masukan nomer jenis pembayaran : "))
+
+    if beli == 1 :
+        bulan = int(input("Berapa bulan yang ingin anda isi : "))
+    elif beli == 2 :
+        harga = int(input("Berapa rupiah yang ingin anda bayar : "))
+    else :
+        print("Nomer pilihan tidak tersedia.")
+
+    tokenA = 100000
+    tokenB = 150000
+    tokenC = 200000
+
+    def jenis_token(jenis) : 
+        if token == 1 :
+            if beli == 1 :
+                a = tokenA*bulan
+                return a
+            elif beli == 2 :
+                b = harga/tokenA
+                return b
+        elif token == 2 :
+            if beli == 1 :
+                a = tokenB*bulan
+                return a
+            elif beli == 2 :
+                b = harga/tokenB
+                return b
+        elif token == 3 :
+            if beli == 1 :
+                a = tokenC*bulan
+                return a
+            elif beli == 2 :
+                b = harga/tokenC
+                return b
+        else :
+            print("Pilihan tidak tersedia, silahkan cek kembali.")
+    
+    if beli == 1 :
+        print("Jumlah yang harus anda bayar adalah : Rp.",(jenis_token(token)))
+        print("Lakukan pembayaran terlebih dahulu !")
+    elif beli == 2 :
+        print("Jumlah bulan yang anda dapatkan adalah : %.0f"%(jenis_token(token)),"bulan.")
+        print("Lakukan pembayaran terlebih dahulu !")
+
+except :
+    ("Pilihan tidak tersedia.")
