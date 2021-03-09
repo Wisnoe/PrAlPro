@@ -1,0 +1,52 @@
+print("=====PENYELESAIAN SOAL VIDEO 5=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====STRUKTUR KONTROL PERULANGAN=====")
+
+pin = 71200555
+uang = 0
+
+print("Selamat datang di Gopay Horangkaya")
+print("")
+nim = int(input("Masukan nomor pin anda : "))
+print("")
+
+if nim == pin :
+    while uang >= 0 :
+        print("Pilih metode penggunaan :")
+        print("1. Isi Gopay Anda")
+        print("2. Mengisi Gopay")
+        print("3. Kirim Gopay")
+        print("4. Ambil Gopay")
+        print("5. Keluar")
+        nomor = int(input("Pilih nomor penggunaan : "))
+        print("")
+        if nomor == 1 :
+            print("Total Gopay anda : Rp",uang)
+            print("")
+        elif nomor == 2 :
+            isi = int(input("Masukan total Top-Up : Rp "))
+            print("Gopay anda telah diperbaharui : Rp",uang+isi)
+            uang+=isi
+            print("")
+        elif nomor == 3 :
+            kir = int(input("Masukan total Gopay yang ingin anda kirim : Rp "))
+            tlp = int(input("Masukan nomor telpon pengguna : "))
+            print("Gopay telah berhasil dikirim ke nomor",tlp,"sebesar : Rp",uang-kir)
+            print("Gopay anda telah diperbaharui : Rp",uang-kir)
+            uang-=kir
+            print("")
+        elif nomor == 4 :
+            amb = int(input("Masukan total Gopay yang ingin anda ambil : RP "))
+            print("Gopay anda telah diperbaharui : Rp",uang-amb)
+            uang-=amb
+            print("")
+        elif nomor == 5 :
+            print("Terimakasih sudah menggunakan jasa kami.")
+            break
+            print("")
+        else :
+            print("Nomor tidak tersedian silahkan cek kembali.")
+    else :
+        print("Anda tidak dapat melakukan transaksi, lakukan pembelian terlebih dahulu.")
+else :
+    print("Nomor pin anda tidak sesuai periksa kembali.")
