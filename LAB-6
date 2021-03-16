@@ -1,0 +1,59 @@
+print("=====PENYELESAIAN SOAL VIDEO 5=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====PERCABANGAN DAN PERULANGAN KOMPLEKS=====")
+print("")
+
+print("Selamat datang di Ramen Tah")
+
+babi = 60000
+ayam = 75000
+sapi = 80000
+
+awal = 0
+bayar = 0
+
+while awal == 0 :
+    print("Silahkan pilih menu yang anda inginkan :")
+    print("1.Ramen Babi = Rp",babi)
+    print("2.Ramen Ayam = Rp",ayam)
+    print("3.Ramen Sapi = Rp",sapi)
+    print("4.Exit")
+    no = int(input("Silahkan masukan pilihan menu : "))
+    if no == 1 :
+        jum = int(input("Berapa yang anda inginkan : "))
+        print("Anda memesan ramen sebanyak :",jum)
+        jum*babi
+        bayar+=jum*babi
+        if bayar <= 0 :
+            break
+    elif no == 2 :
+        jum = int(input("Berapa yang anda inginkan : "))
+        print("Anda memesan ramen sebanyak :",jum)
+        jum*ayam
+        bayar+=jum*ayam
+        if bayar <= 0 :
+            break
+    elif no == 3 :
+        jum = int(input("Berapa yang anda inginkan : "))
+        print("Anda memesan ramen sebanyak :",jum)
+        jum*sapi
+        bayar+=jum*sapi
+        if bayar <= 0 :
+            break
+    elif no == 4 :
+        if bayar <= 0 :
+            break
+        print("Anda harus membayar dengan jumlah : Rp",bayar)
+        print("Metode pembayaran :")
+        print("1.Langsung")
+        print("2.Cicil")
+        mbayar = int(input("Metode pembayaran yang anda gunkan : "))
+        if mbayar == 1 :
+            print("Lakukan pembayaran di kasir Ramen Tah.")
+        elif mbayar == 2 :
+            print("Letakan KTP di kasir Ramen Tah.")
+        else :
+            print("Nomor metode tidak tersedia.")
+        break
+    else :
+        print("Nomor tidak tersedia.")
