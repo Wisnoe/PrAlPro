@@ -1,0 +1,44 @@
+print("=====PENYELESAIAN SOAL VIDEO 7=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====MEMBACA DAN MENULIS FILE=====")
+print("")
+
+print("=====Selamat Datang Di Data Date=====")
+print("Menu Pilihan : ")
+print("1. Save Data Date")
+print("2. Read Data Date")
+print("3. Exit")
+
+i = 0
+
+try :
+    while i == 0 :
+        menu = int(input("Silahkan Pilih : "))
+        print("")
+        if menu == 1 :
+            print("====Save Data Date====")
+            handle = open('D:\\Python UG\\DataDate.txt','a')
+            tanggal = str(input("Masukkan Tanggal dan Hari : "))
+            keterangan = str(input("Masukkan Keterangan Jadwal : "))
+            ket = str(keterangan)
+            handle.write(tanggal+', '+ket+'\n')
+            handle.close()
+        elif menu == 2 :
+            print("====Read Data Date====")
+            handle = open('D:\\Python UG\\DataDate.txt','r')
+            baca = str(input("Masukkan Tanggal dan Hari : "))
+            for o in handle :
+                if o.startswith(baca):
+                    p = o.split(',')
+            if baca in p :
+                print("Tanggal dan Hari :   ",p[0])
+                print("Keterangan Jadwal :  ",p[1])
+            else :
+                print("Tanggal dan Hari tidak tersedia.")
+        elif menu == 3 :
+            print("Terimakasih sudah mengggunakan Data Date.")
+            break
+        else :
+            print("Pilih angka yang sudah tertera.")
+except :
+    print("Data Tanggal dan Hari tidak ditemukan.")
