@@ -1,0 +1,49 @@
+print("=====PENYELESAIAN SOAL VIDEO 8=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====TIPE DATA LIST=====")
+print("")
+
+list = ("Nunu","Wisnoe")
+print("="*34)
+print("++++++++++ Team E-Sport ++++++++++")
+print("="*34)
+nama = input("Masukkan Username Anda : ")
+
+cek = []
+if nama in list :
+    print("")
+    print("===== Selamat Datang Mas.",nama,"=====")
+    print("")
+    while True :
+        print('''1. Tambah Anggota E-Sport
+2. Hapus Anggota E-Sport
+3. Tampilkan Anggota E-Sport
+4. Exit''')
+        pilih = int(input("Masukkan Pilihan Anda : "))
+        print("")
+        if pilih == 1 :
+            le = input("Nama Anggota Baru : ")
+            cek.append(le)
+            print("Anggota",le,"berhasil ditambahkan.")
+            print("")
+        elif pilih == 2 :
+            lo = input("Nama Anggota yang ingin dihapus : ")
+            if lo in cek :
+                cek.remove(lo)
+                print("Anggota",lo,"berhasil dihapus.")
+                print("")
+            else :
+                print("Anggota",lo,"tidak ditemukan.")
+                print("")
+        elif pilih == 3 :
+            for li in range (len(cek)) :
+                print("|",cek[li],"|",end=" ")
+                print("")
+                print("")
+        elif pilih == 4 :
+            print("Selamat Tinggal Mas.",nama,"GLHF")
+            break
+        else :
+            print("Masukkan Nomor yang tersedia.")
+else : 
+    print("Access Ditolak")      
