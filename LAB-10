@@ -1,0 +1,57 @@
+print("=====PENYELESAIAN SOAL VIDEO 9=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====TIPE DATA DICTIONARY=====")
+print("")
+
+print("Menu Gaji Pegawai")
+print("1. Masukkan jumlah gaki pegawai.")
+print("2. Ganti jumlah gaji pegawai.")
+print("3. Lihat gaji pegawai.")
+print("4. Tampilkan gaji serta rata - rata gaji.")
+print("5. Exit")
+print("")
+
+k = 0
+pop = {}
+
+try :
+    while k == 0 :
+        nomor = int(input("Pilih nomor : "))
+        if nomor == 1 :
+            pegawai = int(input("Jumlah pegawai : "))
+            for i in range(pegawai) :
+                print("="*24)
+                nama = str(input("Pegawai : "))
+                gaji = int(input("Gaji : "))
+                pop [nama] = gaji
+            print("")
+        elif nomor == 2 :
+            pegawai1 = str(input("Pegawai : "))
+            if pegawai1 in pop :
+                gaji1 = int(input("gaji baru : "))
+                del pop [pegawai1]
+                pop [pegawai1] = gaji1
+            else : 
+                print("Tidak ada nama pegawai",pegawai1,"di dalam data.")
+            print("")
+        elif nomor == 3 :
+            pegawai2 = str(input("Nama pegawai : "))
+            if pegawai2 in pop :
+                print("Pegawai",pegawai2,"memiliki gaji",pop[pegawai2])
+            else :
+                print("Tidak ada pegawai",pegawai2,"di dalam data.")
+            print("")
+        elif nomor == 4 : 
+            print("Seluruh gaji dari semua pegawai.")
+            print(pop)
+            jum = sum(pop.values())
+            rata = jum/len(pop)
+            print("Rata-rata gaji pegawai :",rata)
+            print("")
+        elif nomor == 5 :
+            print("Bye bye")
+            break
+        else :
+            print("Pilihan nomor tidak ada.")
+except :
+    print("Error.")
