@@ -1,0 +1,51 @@
+print("=====PENYELESAIAN SOAL VIDEO 11=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====TIPE DATA SET=====")
+print("")
+
+print("Pilih Pengecekan Nama : ")
+print("1. Cek Kelengkapan Huruf.")
+print("2. Cek Huruf yang Digunkan.")
+print("3. Exit")
+print("")
+
+p = 0
+
+while p == 0 :
+    nomor = int(input("Masukkan Pilihan Anda : "))
+    if nomor == 1 :
+        nama = str(input("Masukkan Nama Anda : "))
+        huruf = "qwertyuiopasdfghjklzxcvbnm"
+        pop = sorted(huruf)
+        nama = nama.lower()
+        pops = set(nama)
+        x = ''
+        for kata in huruf :
+            if kata not in pops :
+                x = x + kata
+        if (len(x)!=0):
+            print("Nama Anda Tidak Memiliki Semua Huruf.")
+            print("")
+        else :
+            print("Nama Anda Memiliki Semua Huruf.")
+            print("")
+    elif nomor == 2 :
+        nama = str(input("Masukkan Nama Anda : "))
+        def nama_mah(kata):
+            x = nama.lower()
+            naset = set(x)
+            gab = naset
+            garut = sorted(gab)
+            garut.remove(" ")
+            for i in garut :
+                if i == garut[len(garut)-1]:
+                    print(i)
+                    break
+                print(i,end=",")
+        nama_mah(nama)
+        print("")
+    elif nomor == 3 :
+        print("Terimakasih")
+        break
+    else :
+        print("Error")
