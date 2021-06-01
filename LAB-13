@@ -1,0 +1,18 @@
+print("=====PENYELESAIAN SOAL VIDEO 12=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====FUNGSI REKURSIF=====")
+print("")
+
+kal = str(input("Masukkan kalimat dengan huruf yang doble : "))
+
+def hurufdouble(kalimat,huruf = 0) :
+    if huruf == len(kalimat) :
+        return kalimat[huruf - 1]
+    else :
+        lit = ""
+        if huruf < (len(kalimat) - 1) :
+            if kalimat [huruf] != kalimat[huruf + 1] :
+                lit = kalimat[huruf]
+        return lit + hurufdouble (kalimat,huruf + 1)
+
+print("Kalimat yang telah diperbaharui :",(hurufdouble(kal)))
