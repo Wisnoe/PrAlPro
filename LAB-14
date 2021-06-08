@@ -1,0 +1,50 @@
+print("=====PENYELESAIAN SOAL VIDEO 13=====")
+print("===NARENDRA POETRA WISNOEWARDHANA - 71200555===")
+print("=====REGULAR EXPRESSION=====")
+print("")
+
+print("Masukkan Data!")
+print("1. Masukkan nama dan tanggal lahir.")
+print("2. Masukkan nomor telepon anda.")
+print("3. Exit")
+
+import re
+k = 0
+
+try :
+    while k == 0:
+        nomor = int(input("Pilih nomor : "))
+        print("")
+
+        if nomor == 1 :
+            print("Nama-Tanggal-Bulan-Tahun") 
+            tulis = input("Masukkan Nama dan Tanggal lahir anda : ")
+            regex = r"([a-zA-Z]+) (\d+) ([a-zA-Z]+) (\d+)"    
+            sama = re.search(regex, tulis)    
+            if sama != None: 
+                print("Kesamaan : % s, % s" % (sama.start(), sama.end()))
+                print("Nama     : % s" % (sama.group(1)))
+                print("Tanggal  : % s" % (sama.group(2)))
+                print("Bulan    : % s" % (sama.group(3)))
+                print("Tahun    : % s" % (sama.group(4)))
+                print("")   
+            else: 
+                print("Tulis sesuai dengan perintah!")
+                print("")
+
+        elif nomor == 2 :
+            print("Nama-Nomor")
+            tlp = input("Masukkan Nama dan nomor anda : ")
+            nama = re.split (" ",tlp)
+            hp = re.sub("^0","+62",nama[1])
+            print("Nomor Anda   :",nama[0],hp)
+            print("")
+
+        elif nomor == 3 :
+            print("Terimakasih")
+            break
+
+        else :
+            print("Error")
+except :
+    print("Error")
